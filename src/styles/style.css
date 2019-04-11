@@ -1,6 +1,7 @@
 ﻿html {
   font-size: 10px;
   font-family: Montserrat, sans-serif;
+  color: rgb(214, 205, 105);
 }
 
 body {
@@ -9,4 +10,9 @@ body {
   font-size: 15px; 
   font-weight: normal;
   line-height: 21px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 85%;
 }

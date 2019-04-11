@@ -1,5 +1,5 @@
 .header {
-  width: 85%;
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
@@ -11,11 +11,10 @@
   }
 
   &__menu {
-    color: #83838e;
     font-size: 1.8rem;
   
     &__item{
-      color: #83838e;
+      color: rgb(214, 205, 105);
       font-weight: bold;
     }
   
@@ -26,18 +25,37 @@
     &__item:hover {
       color: white;
     }
+
+    &__item:active {
+      color: red;
+    }
   }
 }
 
 .logo {
   height: 10rem;
   width: 10rem;
-
+  filter: grayscale(50%);
   margin: 0;
 
 
   &__images {
+    cursor: pointer;
     size: 15rem;
+  }
+
+  &-spin {
+    animation: 2s logo-spin ;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(360deg);
   }
 }
 
@@ -55,7 +73,16 @@
   }
 
   &__item:hover {
-    color: #d9efff;
+    color:white;
+  }
+
+  &__item:active {
+    color: #004d85;
+    outline: none;
+  }
+
+  &__item:focus {
+    outline: none;
   }
 
   &__item:nth-child(2):hover {
