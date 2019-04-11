@@ -1,5 +1,5 @@
 {
-  "name": "build",
+  "name": "CrazySouslik",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,14 +14,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebHeroSchool/build.git"
+    "url": "git+https://github.com/WebHeroSchool/CrazySouslik.git"
   },
-  "author": "",
+  "author": "ChuVo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebHeroSchool/build/issues"
+    "url": "https://github.com/WebHeroSchool/CrazySouslik/issues"
   },
-  "homepage": "https://github.com/WebHeroSchool/build#readme",
+  "homepage": "https://github.com/WebHeroSchool/CrazySouslik#readme",
   "description": "",
   "devDependencies": {
     "@babel/core": "^7.4.0",
