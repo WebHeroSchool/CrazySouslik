@@ -2,7 +2,7 @@
 gluck.gluck {
   font-family: 'Raleway', sans-serif;
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	right: 0;
   transform: translateY(-50%);
 }

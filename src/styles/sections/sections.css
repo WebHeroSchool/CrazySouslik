@@ -1,0 +1,195 @@
+.sections {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+  &--welcom {
+    height: calc( 100vh - 10rem);
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 50%;
+  }
+
+  &__foto {
+    width: 75%;
+    filter: blur(.5px) drop-shadow(-26px -26px 200px rgba(255,252,0,0.54));
+    animation: 50s foto-fly infinite ;
+  }
+
+  &__foto:hover {
+    filter: blur(0) drop-shadow(-26px -26px 200px rgba(255,252,0,0.8));
+    transition: 2s;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+@keyframes foto-fly {
+  from {
+    transform: translate(0) rotate(0);
+  }
+
+  10% {
+    transform: translate( .3rem, .4rem) rotate(1deg);
+  }
+
+  20% {
+    transform: translate( -0.4rem, .5rem)rotate(.8deg);
+  }
+
+  30% {
+    transform: translate( .3rem, -0.4rem) rotate(1.3deg);
+  }
+
+  40% {
+    transform: translate( .4rem, .3rem) rotate(.9deg);
+  }
+
+  50% {
+    transform: translate( 0, 0) rotate(1.8deg);
+}
+
+  60% {
+    transform: translate( .4rem, 0) rotate(1.2deg);
+}
+
+  70% {
+    transform: translate( 0, .4rem) rotate(2deg);
+}
+
+  80% {
+    transform: translate( .3rem, -0.4rem) rotate(.9deg);
+}
+
+  90% {
+    transform: translate( -0.3rem -0.2rem) rotate(1.2deg);
+}
+
+  10% {
+    transform: translate(-0.3) rotate(.5deg);
+  }
+}
+
+.my-name-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  font-size: 2.5rem;
+  height: 90%;
+}
+
+.my-name__text {
+  transform: translate(-30%, 530%);
+}
+
+/* for section--abaut-me */
+.section__title {
+  color:  rgb(214, 205, 105);
+}
+
+.about-me__wrapper {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sections__icon {
+  width: 5rem;
+  height: 5rem;   
+    
+  &:hover {
+    
+  }
+}
+
+.sections__icon--mobile {
+  animation: 4s mobile infinite ease-in-out;
+}
+
+
+.sections__icon--email {
+  animation: 5s email infinite ease-in-out;
+}
+
+.sections__icon--in {
+  animation: 6s in infinite ease-out;
+} 
+
+@keyframes mobile {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes email {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes in {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+  
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  h1 {
+      font-size: 7rem;
+  }
+
+  .my-name__text {
+      font-size: 2rem;
+      transform: translate(-15%, 500%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sections__image {
+    position: absolute;
+    width: 100%;
+  }
+
+  .my-name-wrapper {
+      width: 100%;
+  }
+
+  gluck.gluck {
+    position: static;
+  }
+}
