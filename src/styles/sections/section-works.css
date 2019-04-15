@@ -69,8 +69,8 @@
     top: 20%;
   }
 
-  &-hover {
-    filter: grayscale(98%) brightness(50%);
+  &:hover {
+    filter: grayscale(98%) brightness(50%) sepia(1);
   }
 }
 
@@ -85,22 +85,27 @@
 }
 
 .works__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 50%;
   color:white;
-  font-size: 120%;
+  text-shadow:1px -1px 10px #2f00ff,1px -1px 0px #fbfd00;
+  position: absolute;
+  white-space:nowrap;
+  top: 25%;
+  left: 50%;
   display: none;
+  z-index: 99;
+
+  &--left {
+    left: 10%;
+  }
 }
 
 .text-typing {
-    width: 40em;
-    font-size: 22px;
-    font-family: 'Marck Script', cursive;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 10s steps(50, end);
+  display: inline;
+  font-size: 2.2rem;
+  font-weight: bold; 
+  overflow:hidden;
+  animation: type 5s steps(50, end);
 }
 
 @keyframes type{
