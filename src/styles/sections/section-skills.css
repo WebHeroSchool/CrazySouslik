@@ -1,0 +1,43 @@
+.skills {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 5rem 0;
+
+  &__title {
+    width: 50%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    height: 100%;
+    width: 50%;   
+  }
+}
+
+.list{
+  list-style-type: decimal-leading-zero;
+
+  &__item {
+    font-weight: 900;
+    color:  rgb(214, 205, 105);
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  &__item-title {
+    color: rgb(251, 255, 0);
+    margin: 0;
+
+  }
+
+  &__item-text {
+    font-weight: 700;
+    transform: translateX(-4%);
+    margin: 0;
+
+  }
+}
