@@ -1,0 +1,43 @@
+.animation-souslik-walk {
+  height: 18rem;
+  width:12rem;
+  overflow: hidden;
+}
+
+.souslik-walk {
+  height: 100%;
+  animation: walk  1s steps(1) infinite;
+}
+
+@keyframes walk {
+  from {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(-21%);
+  }
+  30% {
+    transform: translateX(-30%);
+  }
+  40% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(-51%);
+  }
+  60% {
+    transform: translateX(-61%);
+  }
+  70% {
+    transform: translateX(-71%);
+  }
+  80% {
+    transform: translateX(-82%);
+  }
+  to {
+    transform: translateX(-92%);
+  }
+}

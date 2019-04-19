@@ -1,0 +1,109 @@
+.menu {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 5rem;
+  margin: 0 auto;
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  width: 5rem;
+  z-index: 99;
+
+  @media (max-width: 800px) {
+    right: 5%;
+  }
+
+  &__icon {
+    align-items: center;
+    justify-content: center;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &__label {
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+  }
+}
+
+#menu__check {
+  display: none;
+}
+
+.menu__icon-item {
+  background-color:  yellow;
+  height: .2rem;
+  width:50%;
+}
+
+.menu__icon-item::before,
+.menu__icon-item::after {
+  content: "";
+  display: block;
+  background-color: yellow;
+  height: .2rem;
+  width:50%;
+  position: absolute;
+}
+
+.menu__icon-item::before {  
+  top: 30%;
+}
+
+.menu__icon-item::after {
+  bottom: 30%;
+}
+
+#menu__check:checked ~ .menu__icon-item {
+  background: transparent;
+}
+
+#menu__check:checked ~ .menu__icon-item::before {
+  transform: rotateZ(45deg);
+  top: auto;
+}
+
+#menu__check:checked ~ .menu__icon-item::after {
+  transform: rotateZ(-45deg);
+  bottom: auto;
+}
+
+#menu__check:checked ~ .menu__navigation {
+  transform: translateX(0%);
+}
+
+.menu__navigation {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: fcenter;  
+  position: absolute;
+  height: 93vh;
+  right: 0;
+  top:0;
+  transform: translateX(105%);
+  width: 30vw;
+  z-index: 9;
+  transition: 1s;
+
+  @media (max-width: 800px) {
+    width: 50vh;
+  }
+}
+
+.menu__item {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 2rem;
+}

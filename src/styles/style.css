@@ -1,18 +1,24 @@
 ﻿html {
   font-size: 10px;
-  font-family: Montserrat, sans-serif;
-  color: rgb(214, 205, 105);
+
+  @media (max-width: 800px) {
+    font-size: 8px;
+  }
 }
 
 body {
   background: black;
-  color: white;  
-  font-size: 15px; 
+  color: rgb(255, 255, 0);
+  font-family: AvenirNextCyr, sans-serif;
   font-weight: normal;
-  line-height: 21px;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .main {
-  margin: 0 auto;
-  width: 85%;
+  padding: 0 10%;
+  position: relative;
+  min-height: 100vh;
+  max-width: 1440px;
 }

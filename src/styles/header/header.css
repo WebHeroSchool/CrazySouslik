@@ -1,10 +1,25 @@
 .header {
   width: 100%;
-  height: 100px;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+
+  &__logo {
+    height: 10rem;
+    width: 10rem;
+    /* filter: grayscale(50%); */
+    margin: 0;
+
+    &-image {
+      width: 120%;
+
+      @media (max-width: 400px) {
+        width: 100%;
+      }
+    }
+  }
 
   &__menu-wrapper {
     display: flex;
@@ -12,6 +27,10 @@
 
   &__menu {
     font-size: 1.8rem;
+    
+    @media (max-width: 800px) {
+      display: none;
+    }
   
     &__item{
       color: rgb(214, 205, 105);
@@ -32,35 +51,12 @@
   }
 }
 
-.logo {
-  height: 10rem;
-  width: 10rem;
-  filter: grayscale(50%);
-  margin: 0;
-
-
-  &__images {
-    cursor: pointer;
-    size: 15rem;
-  }
-
-  &-spin {
-    animation: 2s logo-spin ;
-  }
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotateY(0);
-  }
-
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
 .lang-switch {
   margin-left: 3rem;
+
+  @media (max-width: 800px) {
+    margin-right: 5rem;
+  }
 
   &__item {
     cursor: pointer;

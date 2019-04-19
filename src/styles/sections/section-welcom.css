@@ -1,0 +1,169 @@
+.section {
+  &--welcom {
+    height: calc( 100vh - 10rem);
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 40%;
+
+    @media (max-width: 800px) {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__foto {
+    width: 75%;
+    filter: blur(.5px) drop-shadow(-26px -26px 200px rgba(255,252,0,0.54));
+    animation: 50s my-fly infinite ;
+
+    @media (max-width: 800px) {
+      filter: blur(0) drop-shadow(-26px -26px 200px rgba(255,252,0,0.8)) brightness(84%);
+    }
+  }
+
+  &__foto:hover {
+    filter: blur(0) drop-shadow(-26px -26px 200px rgba(255,252,0,0.8));
+    transition: 2s;
+  }
+}
+
+.my-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  height: 90%;
+  margin-bottom: 5rem;
+
+  @media (max-width: 800px) {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+@keyframes my-fly {
+  from {
+    transform: translate(0) rotate(0);
+  }
+
+  10% {
+    transform: translate( .3rem, .4rem) rotate(1deg);
+  }
+
+  20% {
+    transform: translate( -0.4rem, .5rem)rotate(.8deg);
+  }
+
+  30% {
+    transform: translate( .3rem, -0.4rem) rotate(1.3deg);
+  }
+
+  40% {
+    transform: translate( .4rem, .3rem) rotate(.9deg);
+  }
+
+  50% {
+    transform: translate( 0, 0) rotate(1.8deg);
+}
+
+  60% {
+    transform: translate( .4rem, 0) rotate(1.2deg);
+}
+
+  70% {
+    transform: translate( 0, .4rem) rotate(2deg);
+}
+
+  80% {
+    transform: translate( .3rem, -0.4rem) rotate(.9deg);
+}
+
+  90% {
+    transform: translate( -0.3rem -0.2rem) rotate(1.2deg);
+}
+
+  10% {
+    transform: translate(-0.3) rotate(.5deg);
+  }
+}
+
+/* animation for name */
+gluck.gluck {
+  position: relative;
+  
+	@media (max-width: 800px) {
+    gluck.gluck {
+      position: static;
+    }
+  }
+}
+
+h1 {
+    font-size: 8rem;
+		color: rgb(214, 205, 105);
+		text-align: center;
+		margin: 0;
+		text-transform: uppercase;
+    font-weight: 900;
+    
+    @media (max-width: 400px) {
+      font-size: 6rem;
+    }
+	}
+
+.glitched:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+.glitch-window{
+	position: absolute;
+	top: 1%;
+	left: -1px;
+	width: 100%;
+	color: #222222;
+	text-shadow: 1px 0 rgb(141, 161, 247), -1px 0 rgb(0, 68, 255), -1px 0 green;
+	overflow: hidden;
+	animation: crt-me 7s infinite linear alternate-reverse;
+}
+
+@keyframes crt-me {
+	 0% {
+        clip: rect(31px, 9999px, 94px, 0)
+    }
+    10% {
+        clip: rect(112px, 9999px, 76px, 0)
+    }
+    20% {
+        clip: rect(85px, 9999px, 77px, 0)
+    }
+    30% {
+        clip: rect(27px, 9999px, 97px, 0)
+    }
+    40% {
+        clip: rect(64px, 9999px, 150px, 0)
+    }
+    50% {
+        clip: rect(61px, 9999px, 85px, 0)
+    }
+    60% {
+        clip: rect(99px, 9999px, 114px, 0)
+    }
+    70% {
+        clip: rect(34px, 9999px, 115px, 0)
+    }
+    80% {
+        clip: rect(98px, 9999px, 129px, 0)
+    }
+    90% {
+        clip: rect(43px, 9999px, 96px, 0)
+    }
+    100% {
+        clip: rect(82px, 9999px, 64px, 0)
+    }
+}

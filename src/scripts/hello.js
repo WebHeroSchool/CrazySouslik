@@ -1,3 +1,3 @@
 (function() {
-  console.log('hello word');
+  console.log('script hello = ok!');
 }());
