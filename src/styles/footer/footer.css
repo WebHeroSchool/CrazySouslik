@@ -3,15 +3,16 @@
   display: flex;
   border-top: 2px solid yellow;
   padding: 5rem 0;
+  justify-content: space-between;
 
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     flex-direction: column;
   }
 
   &__wrapper {
     width:50%;
 
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
       width: 100%;
     }
   }
@@ -25,6 +26,10 @@
       font-size: 3rem;
 
     }
+  }
+
+  &__title--right {
+    text-align: right;
   }
 
   &__text {
@@ -57,9 +62,26 @@
     }
   }
 
+  &__contact {
+    @media (max-width: 800px) {
+      width: 50%;    
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;    
+    }
+  }
+
   &__contact-wrap {
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -69,19 +91,31 @@
   height: 3rem;
   margin: 1rem;
   width: 3rem;
-  
+
+  &:hover {
+    filter: sepia(.5);
+  }
+
+  &:active {
+    transform: translate(80%, -150%) rotate(360deg);
+    opacity: 0;
+    filter: blur(20px) brightness(150%) sepia(.5);
+    transition: .8s;
+  }
 }
 
 .social__item:nth-child(1) {
-  background-image: url("../images/vk.png");  
+  background: url("../images/vk.png") bottom;
+  background-size: contain;
 }
 
 .social__item:nth-child(2) {
-  background-image: url("../images/in.png");  
+  background: url("../images/in.png");
+  background-size: contain;  
 }
 
 .social__item:nth-child(3) {
-  background: url("../images/git.png") no-repeat;
+  background: url("../images/git.png") no-repeat bottom;
   background-size: contain;
 }
 
