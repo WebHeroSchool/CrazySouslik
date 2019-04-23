@@ -4,14 +4,27 @@
   border-top: 2px solid yellow;
   padding: 5rem 0;
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
   &__wrapper {
     width:50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 
   &__title {
     color: #d6cd69;
     font-size: 2rem;
     margin: 1.5rem 0;
+
+    @media (max-width: 800px) {
+      font-size: 3rem;
+
+    }
   }
 
   &__text {
@@ -21,6 +34,10 @@
 
   &__menu-wrapper {
     width: 25%;
+    
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 
   &__menu {
@@ -40,10 +57,6 @@
     }
   }
 
-  &__contact {
-    width: 25%;
-  }
-
   &__contact-wrap {
     display: flex;
     flex-direction: column;
@@ -56,6 +69,7 @@
   height: 3rem;
   margin: 1rem;
   width: 3rem;
+  
 }
 
 .social__item:nth-child(1) {
@@ -67,7 +81,8 @@
 }
 
 .social__item:nth-child(3) {
-  background-image: url("../images/git.png");  
+  background: url("../images/git.png") no-repeat;
+  background-size: contain;
 }
 
 

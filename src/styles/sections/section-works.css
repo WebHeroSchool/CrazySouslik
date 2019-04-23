@@ -29,6 +29,10 @@
   width: 50%;
   float: left;
 
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+
   &:nth-child(3) {
     transform: translateY(-23%);
   }

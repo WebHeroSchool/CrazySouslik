@@ -19,7 +19,7 @@
     isScrolling = true;
   }  
 
-  //выполнение анимации пра появлении элемента в этой функции
+  //выполнение анимации при появлении элемента в этой функции
   function scrolling( e ) {
     for ( var i = 0; i < listItems.length; i = i + 2 ) {
       var listItem = listItems[i];

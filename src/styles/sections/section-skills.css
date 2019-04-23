@@ -1,3 +1,7 @@
+.section__skills {
+  justify-content: center;
+}
+
 .skills {
   display: flex;
   align-items: center;
@@ -5,8 +9,16 @@
   width: 100%;
   padding: 5rem 0;
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
   &__title {
     width: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
   }
 
   &__list {
@@ -14,30 +26,104 @@
     flex-direction: column;
     justify-content: center;;
     height: 100%;
-    width: 50%;   
+    width: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.section__text--justify {
+  color: #d6cd69;
+  text-align: justify;
+  width: 80%;
+
+  @media (max-width: 800px) {
+    width: 100%;
   }
 }
 
 .list{
+  position: relative;
   list-style-type: decimal-leading-zero;
 
   &__item {
+    font-size: 1.8rem;
     font-weight: 900;
     color:  rgb(214, 205, 105);
-    width: 90%;
+    position: relative;
+    text-align: justify;
     margin-bottom: 2rem;
   }
 
+  &__item:hover {
+    transform: scale(1.01);
+    transition: .5s;
+  }
+
+  &__item::after {
+    content: "";
+    display: block;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    left: -9rem;
+    width: 3rem;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__item:nth-child(1)::after {
+    background: url("../images/html.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(2)::after {
+    background: url("../images/css.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(3)::after {
+    background: url("../images/js.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(4)::after {
+    background: url("../images/git.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(5)::after {
+    background: url("../images/gulp.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(6)::after {
+    background: url("../images/postcss.png") no-repeat;
+    background-size: contain;
+  }
+
   &__item-title {
-    color: rgb(251, 255, 0);
+    color:rgb(255, 255, 0);
     margin: 0;
 
   }
 
   &__item-text {
+    font-size: 1.5rem;
     font-weight: 700;
-    transform: translateX(-4%);
-    margin: 0;
+    line-height: 2rem;
+    transform: translateX(-3.5rem);
+  }
 
+  @media (max-width: 800px) {
+    transform: translateX(1rem);
   }
 }
