@@ -11,6 +11,4 @@
       }, 1000);
     };
 
-    console.log('script preloader = ok');
-
 }());

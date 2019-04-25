@@ -8,6 +8,5 @@
         }, 500);
         return false;
     });
-
-    console.log('script scroll = ok');
+    
 }());

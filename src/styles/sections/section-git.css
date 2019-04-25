@@ -1,0 +1,112 @@
+.git {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 5rem 0;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  &__title {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    width: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  &__list {border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    height: 100%;
+    width: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.list__elem { 
+  font-size: 1.8rem;
+  font-weight: 900;
+  color:  rgb(214, 205, 105);
+  position: relative;
+  text-align: justify;
+  margin-bottom: 2rem;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: .5s;
+  }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.list__title {
+  color:rgb(255, 255, 0);
+  margin: 0;
+  margin-bottom: .5rem;;
+  display: block;
+}
+
+.list__lang {
+  font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    position: relative;
+    transform: translateX(-3.5rem);
+    margin-right: 5rem;
+}
+
+.list__lang-color {
+  background: blue;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  size: 1rem;
+}
+
+.list__lang-html {
+  background: red;
+}
+
+.list__lang-css {
+  background: blueviolet;
+}
+
+
+.list__lang-js {
+  background: yellow;
+}
+
+.list__fork {  
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    background: url("../images/forks.png");
+    background-size: cover;
+    position: absolute;
+    left: -2.5rem;
+    size: 2rem;
+  }
+
+}
