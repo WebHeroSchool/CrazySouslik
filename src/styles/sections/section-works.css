@@ -36,6 +36,14 @@
   width: 50%;
   float: left;
 
+  &--left {
+    transform: translate(-100%, 10%) scale(.8);
+  }
+
+  &--right {
+    transform: translate(100%, 10%) scale(.8);
+  }
+
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -95,23 +103,18 @@
   display: inline;
   font-size: 2.2rem;
   font-weight: bold; 
-  overflow: visible;
-  animation: type 5s steps(50, end);
+  overflow: hidden;
+  animation: type 2s steps(20, end);
 }
-
-@keyframes type{
-    from { width: 0; }
-}
-
-@-webkit-keyframes type{
+@keyframes type {
     from { width: 0; }
 }
 
 .anim-come-left {
-  animation: come-left 2s;
+  animation: come-left 2s forwards;
 }
 .anim-come-right {
-  animation: come-right 2s;
+  animation: come-right 2s forwards;
 }
 
 @keyframes come-left {
@@ -134,7 +137,7 @@
     transform: translate(-0.2%,0);
   }
   to {
-    transform: translate(0) scale(1);
+    transform: translate(0%) scale(1);
   }
 }
 

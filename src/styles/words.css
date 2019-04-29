@@ -1,6 +1,6 @@
 .smoke {
   width: 100%;
-  height: 4rem;
+  height: 6rem;
   position: absolute;
   bottom: 20%;
 }
@@ -27,60 +27,35 @@
   letter-spacing: 1rem;
   text-align: center;
   width: 100%;
-  opacity: 0; animation: out 2.4s forwards ease-in; 
+	opacity: 0;
 }
 
 .smoke__come {
-  animation: come 2.4s forwards ease-out;
+  animation: come .5s forwards ease-out;
+}	
+
+.smoke__out {
+	animation: out .5s forwards ease-in; 
 }
 
 @keyframes come {
-	0% {
-    /* transform: rotate(50deg) translateX(-60%); */
-    transform:  translateX(-300%);
-    font-size: 0;
-		opacity: 1;
-    filter: blur(10px);
+	from {
+		transform: perspective(500px) rotateY(-90deg);
+		opacity: 0;
 	}
-	100% {
-		transform: rotate(0deg) translateY(0px);
+	to {
+		transform: perspective(500px) rotateY(0deg);
 		opacity: 1;
-    filter: blur(0);
-    font-size: 3rem;
 	}
-}
-
-.smoke__out {
-  animation: out 2.4s;
 }
 
 @keyframes out {
-	0% {
-		transform: rotate(0deg) translateY(0);
+	from {
+		transform: perspective(500px) rotateY(0deg);
 		opacity: 1;
-		filter: blur(1px);
 	}
-	100% {
-		transform: rotate(-50deg) translateX(60%);
+	to {
+		transform: perspective(500px) rotateY(90deg);
 		opacity: 0;
-    filter: blur(20px);
-    font-size: 0;
 	}
 }
-
-
-/* .smoke ul li:nth-child(1) {
-	animation-delay: 0s;
-}
-.smoke ul li:nth-child(2) {
-	animation-delay: .4s;
-}
-.smoke ul li:nth-child(3) {
-	animation-delay: .8s;
-}
-.smoke ul li:nth-child(4) {
-	animation-delay: 1.2s;
-}
-.smoke ul li:nth-child(5) {
-	animation-delay: 1.6s;
-} */

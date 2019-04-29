@@ -133,6 +133,7 @@
 
   &:hover {
     color: yellow;
+    font-size: 2rem;
     transition: .5s;
     filter: brightness(120%);
     background-size: 60%;

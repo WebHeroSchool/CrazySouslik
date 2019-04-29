@@ -11,19 +11,19 @@
     }
     come( index );   
     
-  }, 6000);
+  }, 5000);
     
   function come(i) {
     
     if ( text[i].classList.contains('smoke__out') ){
       text[ i ].classList.remove('smoke__out');
     }
-    
+  
     text[i].classList.add('smoke__come');
     
     setTimeout( () => {
       out( index );
-      }, 5000);
+      }, 4000);
   }
 
   function out(i) {

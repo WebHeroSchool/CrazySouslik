@@ -1,7 +1,7 @@
 //Функция для включения анимации(печать текста) при наведении на изображении примеров работ
 ( function() {
 
-  const elem = document.querySelectorAll('.works__site');
+  const elem = document.querySelectorAll('.works__link');
 
   elem.forEach( (i) => {
 
