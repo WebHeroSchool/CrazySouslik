@@ -14,22 +14,29 @@
     position: sticky;
     top: 0;
     width: 50%;
+    z-index: 9;
 
+    @media (max-width: 800px) {
+      background: rgba(0,0,0,.8);
+      width: 100%;
+    }
+  }
+
+  &__list-wrapper {
+    min-height: 50vh;
+    position: relative;
+    width: 50%;
     @media (max-width: 800px) {
       width: 100%;
     }
   }
 
-  &__list {border: 1px solid red;
+  &__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;;
+    justify-content: center;
     height: 100%;
-    width: 50%;
-
-    @media (max-width: 800px) {
-      width: 100%;
-    }
+    width: 100%;    
   }
 
   @media (max-width: 800px) {
@@ -42,33 +49,34 @@
   font-weight: 900;
   color:  rgb(214, 205, 105);
   position: relative;
-  text-align: justify;
   margin-bottom: 2rem;
-
-  &:hover {
-    transform: scale(1.01);
-    transition: .5s;
-  }
-
-  @media (max-width: 800px) {
-    display: none;
-  }
 }
 
 .list__title {
-  color:rgb(255, 255, 0);
-  margin: 0;
-  margin-bottom: .5rem;;
+  color:yellow;
   display: block;
+  margin: 0;
+  margin-bottom: .5rem;
+  text-decoration: none;
+  
+  &:hover {
+    color:  white;
+    text-decoration: underline;
+  }
 }
 
-.list__lang {
+.list__text,
+.list__data-update {
   font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 2rem;
     position: relative;
-    transform: translateX(-3.5rem);
     margin-right: 5rem;
+}
+
+.list__data-update {
+  position: absolute;
+  right: 0;
 }
 
 .list__lang-color {
@@ -90,23 +98,144 @@
   background: blueviolet;
 }
 
-
 .list__lang-js {
   background: yellow;
 }
 
 .list__fork {  
   display: inline-block;
+  margin-right: 5rem;
   position: relative;
 
   &::before {
     content: '';
     display: block;
-    background: url("../images/forks.png");
-    background-size: cover;
+    background: url("../images/forks.png") no-repeat;
+    background-size: contain;
     position: absolute;
-    left: -2.5rem;
+    left: -2rem;
     size: 2rem;
   }
 
+}
+
+.list__star {
+  display: inline-block;
+  margin-right: 5rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    background: url("../images/star.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -2rem;
+    size: 2rem;
+  }
+}
+
+.list__nav {
+  position: absolute;
+  bottom: 0;
+  size: 5rem;
+  width: 100%;
+}
+
+.list__nav-page {
+  background: none;
+  border:none;
+  color: rgb(214, 205, 105);
+  font-size: 2rem;
+  margin-right: 2rem;
+  font-weight: 900;
+
+  &--active {
+    color: yellow;
+  }
+}
+
+.git__preloader {
+  
+  background: black;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80%;
+  width: 100%;
+  z-index: 99;
+
+  & .caption {
+    margin: 3rem auto;
+  }
+}
+
+.cube-loader {
+  width: 5rem;
+  height:5rem;
+  margin: 0 auto;
+  position: relative;
+  transform: rotateZ(45deg);
+
+  & .cube {
+    position: relative;
+    transform: rotateZ(45deg);
+    width: 50%;
+    height: 50%;
+    float: left;
+    transform: scale(1.1);
+  }
+
+  & .cube:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 73, 94, 1.0);
+    animation: cube-loader 2.76s infinite linear both;
+    transform-origin: 100% 100%;
+  }
+
+  & .loader-2 {
+    transform: scale(1.1) rotateZ(90deg);
+  }
+
+  & .loader-3 {
+    transform: scale(1.1) rotateZ(180deg);
+  }
+
+  & .loader-4 {
+    transform: scale(1.1) rotateZ(270deg);
+  }
+
+  & .loader-2:before {
+    animation-delay: 0.35s;
+  }
+
+  & .loader-3:before {
+    animation-delay: 0.69s;
+  }
+
+  & .loader-4:before {
+    animation-delay: 1.04s;
+  }
+}
+
+
+@keyframes cube-loader {
+  0%, 10% {
+    transform: perspective(136px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%, 75% {
+    transform: perspective(136px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: perspective(136px) rotateY(180deg);
+    opacity: 0;
+  }
 }

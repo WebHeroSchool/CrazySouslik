@@ -10,7 +10,7 @@
 
   //определение момента скролинга
   function throttleScroll( e ) {
-    if ( isScrolling == false ) {
+    if ( isScrolling === false ) {
       window.requestAnimationFrame( function() {
         scrolling( e );
         isScrolling = false;
@@ -21,8 +21,8 @@
 
   //выполнение анимации при появлении элемента в этой функции
   function scrolling( e ) {
-    for ( var i = 0; i < listItems.length; i = i + 2 ) {
-      var listItem = listItems[i];
+    for ( let i = 0; i < listItems.length; i = i + 2 ) {
+      let listItem = listItems[i];
 
       if (isPartiallyVisible(listItem)) {
         listItem.classList.add( "anim-come-left" );
@@ -31,8 +31,8 @@
       }
     }
 
-    for ( var i = 1; i < listItems.length; i = i + 2 ) {
-      var listItem = listItems[i];
+    for ( let i = 1; i < listItems.length; i = i + 2 ) {
+      let listItem = listItems[i];
       if ( isPartiallyVisible(listItem) ) {
         listItem.classList.add( "anim-come-right" );
       } else {

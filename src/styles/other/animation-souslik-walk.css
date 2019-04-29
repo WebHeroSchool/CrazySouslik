@@ -2,6 +2,7 @@
   height: 18rem;
   width:12rem;
   overflow: hidden;
+  z-index: 99;
 }
 
 .souslik-walk {
