@@ -1,7 +1,14 @@
 .section--heigth {
   flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   height: auto;
+}
+
+.section__works {
+  padding-top: 5rem;
+  width: 120%;
+  overflow: hidden;
 }
 
 .section__justify {

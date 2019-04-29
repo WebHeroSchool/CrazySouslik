@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: center;
     border: 2px solid yellow;
+    border-right: none;
     border-radius: 50%;
     display: flex;
     height: 100%;
@@ -42,6 +43,7 @@
   background-color:  yellow;
   height: .2rem;
   width:50%;
+  z-index: 99;
 }
 
 .menu__icon-item::before,
@@ -81,15 +83,17 @@
 }
 
 .menu__navigation {
-  border: 1px solid yellow;
+  border-radius: 2rem;
+  border-left: 2px solid yellow;
+  background: rgba(0,0,0,.8);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-self: center;  
   position: absolute;
   height: 93vh;
-  right: 0;
-  top:0;
+  right: -2px;
+  top: -2px;
   transform: translateX(105%);
   width: 30vw;
   z-index: 9;
@@ -100,10 +104,37 @@
   }
 }
 
-.menu__item {
+.menu__item {  
+  border-bottom: 1px solid rgb(253, 253, 143);
   color: white;
   font-size: 1.8rem;
   font-weight: bold;
+  height: 23%;
   text-decoration: none;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  filter: brightness(80%);
+
+  &:nth-child(1) {
+    background: url(../images/welcom.jpg) center no-repeat;
+    background-size: contain;
+  }
+  &:nth-child(2) {
+    background: url(../images/works.jpg) center no-repeat;
+    background-size: contain;
+  }
+  &:nth-child(3) {
+    background: url(../images/skills.jpg) center no-repeat;
+    background-size: contain;
+  }
+  &:nth-child(4) {
+    background: url(../images/repo.jpg) center no-repeat;
+    background-size: contain;
+  }
+
+  &:hover {
+    color: yellow;
+    transition: .5s;
+    filter: brightness(120%);
+    background-size: 60%;
+  }
 }

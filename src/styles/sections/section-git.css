@@ -136,9 +136,10 @@
 }
 
 .list__nav {
-  position: absolute;
   bottom: 0;
+  position: absolute;
   size: 5rem;
+  text-align: center;
   width: 100%;
 }
 
