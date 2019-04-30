@@ -18,7 +18,7 @@
   }
 
   &__title {
-    color: #d6cd69;
+    color: yellow;
     font-size: 2rem;
     margin: 1.5rem 0;
 
@@ -33,7 +33,7 @@
   }
 
   &__text {
-    color: yellow;
+    color: #d6cd69;
     font-size: 1.8rem;
     line-height: 3rem;
 
@@ -62,7 +62,7 @@
 
   &__menu-item {
     font-size: 1.8rem;
-    color: white;
+    color: #d6cd69;
     text-decoration: none;
     line-height: 3rem;
 
@@ -112,7 +112,7 @@
   &:active {
     transform: translate(80%, -150%) rotate(360deg);
     opacity: 0;
-    filter: blur(10px) brightness(550%) sepia(.5);
+    filter: blur(10px) brightness(600%) sepia(.5);
     transition: .5s;
   }
 }
