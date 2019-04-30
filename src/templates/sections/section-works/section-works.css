@@ -11,7 +11,7 @@
   overflow: hidden;
   padding-bottom: 10%;
 
-  @media screen and (orientation:landscape) {
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
     width: 100%;
     padding-bottom: 30%;
   }

@@ -12,7 +12,7 @@
       width: 100%;
     }
 
-    @media screen and (orientation:landscape) {
+    @media only screen and (max-width : 800px) and (orientation:landscape) {
       width: 30%;
       top: 10%;
       left: -16%;
@@ -121,7 +121,7 @@ h1 {
       font-size: 6rem;
     }
 
-    @media screen and (orientation:landscape) {
+    @media only screen and (max-width : 800px) and (orientation:landscape) {
       font-size: 5rem;
     }
 	}
