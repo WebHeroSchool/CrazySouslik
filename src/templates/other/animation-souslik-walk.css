@@ -1,16 +1,25 @@
-.animation-souslik-walk {
+.souslik {
+  height: 15rem;
+  position: relative;
+  width: 100%;
+}
+
+.souslik__walk {
   height: 18rem;
   width:12rem;
   overflow: hidden;
+  position: absolute;
   z-index: 99;
+
+  animation: walk  10s infinite ease-in-out;
 }
 
-.souslik-walk {
+.souslik__staps {
   height: 100%;
-  animation: walk  1s steps(1) infinite;
+  animation: staps  1s steps(1) infinite;
 }
 
-@keyframes walk {
+@keyframes staps {
   from {
     transform: translateX(0);
   }
@@ -40,5 +49,25 @@
   }
   to {
     transform: translateX(-92%);
+  }
+}
+
+@keyframes walk {
+  from {
+    left: 0;
+  }
+  49% {
+    transform: scaleX(1);
+  }
+  50% {
+    left: 75%;
+    transform: scaleX(-1);
+  }
+  99% {
+    transform: scaleX(-1);
+  }
+  to {
+    left: 0;
+    transform: scaleX(1);
   }
 }

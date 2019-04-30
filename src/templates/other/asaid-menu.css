@@ -139,3 +139,27 @@
     background-size: 60%;
   }
 }
+
+.menu__arrow-top {
+  border: 2px solid yellow;
+  border-bottom: none;
+  border-radius: 50%;
+  height: 5rem;
+  position: fixed;
+  bottom: 6rem;
+  right: 2.5rem;
+  width: 5rem;
+  z-index: -1;
+
+  &:before {
+    border-top: 1px solid yellow;
+    border-left: 1px solid yellow;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -25%) rotate(45deg);
+    left: 50%;
+    size: 40%;
+  }
+}

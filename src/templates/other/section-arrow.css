@@ -13,6 +13,11 @@
     border-bottom: 3px solid rgb(214, 205, 105);
   border-right: 3px solid rgb(214, 205, 105);
   }
+
+  &-link {
+    size: 100%;
+    display: block;
+  }
 }
 
 @keyframes arrow {

@@ -44,7 +44,6 @@
 }
 
 .section__text--width {
-  color: #d6cd69;
   width: 80%;
 
   @media (max-width: 800px) {
@@ -80,7 +79,8 @@
     width: 3rem;
 
     @media (max-width: 800px) {
-      display: none;
+      right: 3rem;
+      left: auto;
     }
   }
 
@@ -111,6 +111,11 @@
 
   &__item:nth-child(6)::after {
     background: url("../images/postcss.png") no-repeat;
+    background-size: contain;
+  }
+
+  &__item:nth-child(7)::after {
+    background: url("../images/sass.png") no-repeat;
     background-size: contain;
   }
 

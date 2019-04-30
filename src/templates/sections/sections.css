@@ -8,6 +8,7 @@
   }
 
   &__text {
+    color: #d6cd69;
     font-size: 2rem;
     text-align: justify;
   }

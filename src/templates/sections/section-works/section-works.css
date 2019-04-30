@@ -17,6 +17,7 @@
 
 .section__title--works {
   position: absolute;
+  text-align: center;
   top:0;
 }
 
@@ -79,8 +80,23 @@
 
 .works__site {
   width: 100%;
-  transform: perspective(300px) skew(1deg) skewY(-2deg) rotate(2deg) rotateX(3deg);
   box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.65);
+
+  &--percpective-1 {
+    transform: perspective(500px) skew(0deg) skewY(-2deg) skewX(0deg) rotate(2deg) rotateX(3deg) rotateY(-2deg);
+  }
+
+  &--percpective-2 {
+    transform: perspective(500px) skewX(1deg) rotateX(3deg) rotateY(2deg);
+  }
+
+  &--percpective-3 {
+    transform: perspective(500px) skew(13deg) skewY(-21deg) skewX(10deg) rotate(22deg) rotateX(-4deg) rotateY(-3deg);
+  }
+  
+  &--percpective-4 {
+    transform: perspective(500px) skew(13deg) skewY(-28deg) skewX(18deg) rotate(32deg) rotateX(-3deg) rotateY(3deg);
+  }
 }
 
 .works__text {

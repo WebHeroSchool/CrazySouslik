@@ -33,9 +33,19 @@
   }
 
   &__text {
+    color: yellow;
     font-size: 1.8rem;
     line-height: 3rem;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: blue;
+    }
   }
+
 
   &__menu-wrapper {
     width: 25%;
@@ -108,17 +118,21 @@
 }
 
 .social__item:nth-child(1) {
-  background: url("../images/vk.png") bottom;
+  background: url("../images/git.png") no-repeat bottom;
   background-size: contain;
 }
 
 .social__item:nth-child(2) {
-  background: url("../images/in.png");
+  background: url("../images/in.png") no-repeat;
   background-size: contain;  
 }
 
 .social__item:nth-child(3) {
-  background: url("../images/git.png") no-repeat bottom;
+  background: url("../images/vk.png") no-repeat bottom;
+  background-size: contain;
+}
+.social__item:nth-child(4) {
+  background: url("../images/telegram.png") no-repeat bottom;
   background-size: contain;
 }
 

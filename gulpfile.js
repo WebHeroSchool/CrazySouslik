@@ -29,8 +29,8 @@ const env = require( 'gulp-env' ),
 const paths = {
     src: {
       dir: './src/',
-      styles: './src/styles/**/*.css',
-      scripts: './src/scripts/**/*.js',
+      styles: './src/templates/**/*.css',
+      scripts: './src/templates/**/*.js',
       fonts: './src/fonts/**/*',
       images: './src/images/**/*'
     },
