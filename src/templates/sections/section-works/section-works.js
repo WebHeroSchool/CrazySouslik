@@ -11,7 +11,10 @@
   }); 
 
   function getNextElem(e) {
-    e.target.parentNode.nextElementSibling.classList.add( 'text-typing' );
+    if ( !e.target.classList.contains('text-typing') ) {
+      e.target.parentNode.nextElementSibling.classList.add( 'text-typing' );
+    }
+    
   }
   function closeNextElem(e) {
     e.target.parentNode.nextElementSibling.classList.remove( 'text-typing' ); 

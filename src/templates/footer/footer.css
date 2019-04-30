@@ -1,9 +1,9 @@
 .footer {
-  width: 100%;
-  display: flex;
   border-top: 2px solid yellow;
-  padding: 5rem 0;
+  display: flex;
+  padding: 7rem 0;
   justify-content: space-between;
+  width: 100%;
 
   @media (max-width: 600px) {
     flex-direction: column;

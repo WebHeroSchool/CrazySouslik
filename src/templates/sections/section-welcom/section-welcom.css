@@ -16,7 +16,8 @@
   &__foto {
     width: 75%;
     filter: blur(.5px) drop-shadow(-26px -26px 200px rgba(255,252,0,0.54));
-    animation: 50s my-fly infinite ;
+    transform: perspective(500px);
+    animation: 50s my-fly infinite;
 
     @media (max-width: 800px) {
       filter: blur(0) drop-shadow(-26px -26px 200px rgba(255,252,0,0.8)) brightness(84%);
@@ -47,47 +48,47 @@
 
 @keyframes my-fly {
   from {
-    transform: translate(0) rotate(0);
+    transform: translate(0) rotate(0) perspective(500px);
   }
 
   10% {
-    transform: translate( .3rem, .4rem) rotate(1deg);
+    transform: translate( .3rem, .4rem) rotate(1deg) perspective(500px);
   }
 
   20% {
-    transform: translate( -0.4rem, .5rem)rotate(.8deg);
+    transform: translate( -0.4rem, .5rem)rotate(.8deg) perspective(500px);
   }
 
   30% {
-    transform: translate( .3rem, -0.4rem) rotate(1.3deg);
+    transform: translate( .3rem, -0.4rem) rotate(1.3deg) perspective(500px);
   }
 
   40% {
-    transform: translate( .4rem, .3rem) rotate(.9deg);
+    transform: translate( .4rem, .3rem) rotate(.9deg) perspective(500px);
   }
 
   50% {
-    transform: translate( 0, 0) rotate(1.8deg);
+    transform: translate( 0, 0) rotate(1.8deg) perspective(500px);
 }
 
   60% {
-    transform: translate( .4rem, 0) rotate(1.2deg);
+    transform: translate( .4rem, 0) rotate(1.2deg) perspective(500px);
 }
 
   70% {
-    transform: translate( 0, .4rem) rotate(2deg);
+    transform: translate( 0, .4rem) rotate(2deg) perspective(500px);
 }
 
   80% {
-    transform: translate( .3rem, -0.4rem) rotate(.9deg);
+    transform: translate( .3rem, -0.4rem) rotate(.9deg) perspective(500px);
 }
 
   90% {
-    transform: translate( -0.3rem -0.2rem) rotate(1.2deg);
+    transform: translate( -0.3rem -0.2rem) rotate(1.2deg) perspective(500px);
 }
 
   10% {
-    transform: translate(-0.3) rotate(.5deg);
+    transform: translate(-0.3) rotate(.5deg) perspective(500px);
   }
 }
 
