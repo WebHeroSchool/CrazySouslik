@@ -7,9 +7,15 @@
   &__image {
     width: 40%;
 
-    @media (max-width: 800px) {
+    @media (max-width: 815px) {
       position: absolute;
       width: 100%;
+    }
+
+    @media screen and (orientation:landscape) {
+      width: 30%;
+      top: 10%;
+      left: -16%;
     }
   }
 
@@ -19,7 +25,7 @@
     transform: perspective(500px);
     animation: 50s my-fly infinite;
 
-    @media (max-width: 800px) {
+    @media (max-width: 815px) {
       filter: blur(0) drop-shadow(-26px -26px 200px rgba(255,252,0,0.8)) brightness(84%);
     }
   }
@@ -40,7 +46,7 @@
   height: 90%;
   margin-bottom: 5rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: 815px) {
     justify-content: flex-start;
     width: 100%;
   }
@@ -96,7 +102,7 @@
 gluck.gluck {
   position: relative;
   
-	@media (max-width: 800px) {
+	@media (max-width: 815px) {
     gluck.gluck {
       position: static;
     }
@@ -113,6 +119,10 @@ h1 {
     
     @media (max-width: 400px) {
       font-size: 6rem;
+    }
+
+    @media screen and (orientation:landscape) {
+      font-size: 5rem;
     }
 	}
 

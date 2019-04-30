@@ -80,6 +80,10 @@
 
 #menu__check:checked ~ .menu__navigation {
   transform: translateX(0%);
+
+  @media screen and (orientation:landscape) {
+    top: -100%;
+  }
 }
 
 .menu__navigation {
@@ -102,6 +106,19 @@
   @media (max-width: 800px) {
     width: 90vw;
   }
+
+  @media screen and (orientation:landscape) {
+    align-items: center;
+    border: none;
+    border-bottom: 2px solid yellow;
+    right: 110%;
+    top: -750%;
+    transform: translateX(0);
+    width: 80vw;
+    flex-direction: row;
+    height:80vh;
+    
+	}
 }
 
 .menu__item {  
@@ -113,6 +130,11 @@
   text-decoration: none;
   margin-left: 1rem;
   filter: brightness(80%);
+
+  @media screen and (orientation:landscape) {
+    height: 60%;
+    width: 40%;
+  }
 
   &:nth-child(1) {
     background: url(../images/welcom.jpg) center no-repeat;
@@ -150,6 +172,10 @@
   right: 2.5rem;
   width: 5rem;
   z-index: -1;
+  
+  @media screen and (orientation:landscape) {
+    bottom: 2.5rem;
+  }
 
   &:before {
     border-top: 1px solid yellow;

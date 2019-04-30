@@ -10,6 +10,11 @@
   width: 120%;
   overflow: hidden;
   padding-bottom: 10%;
+
+  @media screen and (orientation:landscape) {
+    width: 100%;
+    padding-bottom: 30%;
+  }
 }
 
 .section__justify {
