@@ -81,7 +81,7 @@
 #menu__check:checked ~ .menu__navigation {
   transform: translateX(0%);
 
-  @media screen and (orientation:landscape) {
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
     top: -100%;
   }
 }
@@ -105,9 +105,9 @@
 
   @media (max-width: 800px) {
     width: 90vw;
-  }
+  }  
 
-  @media screen and (orientation:landscape) {
+  @media only screen and (max-width : 800px) and (orientation:landscape)  {
     align-items: center;
     border: none;
     border-bottom: 2px solid yellow;
@@ -131,7 +131,7 @@
   margin-left: 1rem;
   filter: brightness(80%);
 
-  @media screen and (orientation:landscape) {
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
     height: 60%;
     width: 40%;
   }
@@ -173,7 +173,7 @@
   width: 5rem;
   z-index: -1;
   
-  @media screen and (orientation:landscape) {
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
     bottom: 2.5rem;
   }
 

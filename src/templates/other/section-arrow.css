@@ -9,6 +9,8 @@
   transform: translateX(-50%) rotate(35deg) skewX(-20deg);
   animation: arrow .5s infinite ease-out alternate;
 
+  
+
   &:hover {
     border-bottom: 3px solid rgb(214, 205, 105);
   border-right: 3px solid rgb(214, 205, 105);
@@ -18,6 +20,13 @@
     size: 100%;
     display: block;
   }
+}
+
+.section__works + .section__arrow {
+
+  @media (max-width: 800px) {
+    bottom: 0;
+  }  
 }
 
 @keyframes arrow {
