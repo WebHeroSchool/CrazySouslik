@@ -52,8 +52,10 @@
 }
 
 .list{
-  position: relative;
   list-style-type: decimal-leading-zero;
+  margin-bottom: 10%;
+  position: relative;
+ 
 
   &__item {
     font-size: 1.8rem;
