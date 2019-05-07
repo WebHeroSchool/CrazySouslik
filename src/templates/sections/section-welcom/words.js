@@ -16,7 +16,7 @@
   function come(i) {
     
     if ( text[i].classList.contains('smoke__out') ){
-      text[ i ].classList.remove('smoke__out');
+      text[i].classList.remove('smoke__out');
     }
   
     text[i].classList.add('smoke__come');
@@ -33,5 +33,4 @@
     
     index++;
   }
-
 }());

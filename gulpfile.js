@@ -108,8 +108,10 @@ gulp.task( 'build-css', () => {
     }),
     postcssPresetEnv(/* pluginOptions */),
     autoprefixer({
-      browsers: ['last 2 version']
-    }),
+      browsers: [ 'last 5 versions' ],
+      remove: false,
+      flexbox: true,
+    })
   ];
 
   return gulp.src( [paths.src.styles] )
