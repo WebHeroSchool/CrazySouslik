@@ -1,6 +1,8 @@
 //функция, которая скрывает боковое меню при клике на body
-(function() {
+(function closeAsideMenu() {
+
   const asideMenu = document.querySelector('.menu__label'),
+        menuItem = document.querySelectorAll( '.menu__item'),
         chekMenu = document.getElementById('menu__check');
 
   document.body.addEventListener('click', (e) => {    
@@ -14,5 +16,16 @@
       }
     }
   });
+
+  let w = screen.width;
+  
+  if ( w < 800 ) {
+    menuItem.forEach( (i) => {
+
+      i.addEventListener( 'click', () => {
+        chekMenu.checked = false;
+      });
+    });
+  };
 
 }());

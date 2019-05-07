@@ -1,7 +1,10 @@
 .section {
+
   &--welcom {
     height: calc( 100vh - 10rem);
     justify-content: space-between;
+    margin-top: 0;
+    min-height: 0;
   }
 
   &__image {
@@ -56,43 +59,33 @@
   from {
     transform: translate(0) rotate(0) perspective(500px);
   }
-
   10% {
     transform: translate( .3rem, .4rem) rotate(1deg) perspective(500px);
   }
-
   20% {
     transform: translate( -0.4rem, .5rem)rotate(.8deg) perspective(500px);
   }
-
   30% {
     transform: translate( .3rem, -0.4rem) rotate(1.3deg) perspective(500px);
   }
-
   40% {
     transform: translate( .4rem, .3rem) rotate(.9deg) perspective(500px);
   }
-
   50% {
     transform: translate( 0, 0) rotate(1.8deg) perspective(500px);
-}
-
+  }
   60% {
     transform: translate( .4rem, 0) rotate(1.2deg) perspective(500px);
-}
-
+  }
   70% {
     transform: translate( 0, .4rem) rotate(2deg) perspective(500px);
-}
-
+  }
   80% {
     transform: translate( .3rem, -0.4rem) rotate(.9deg) perspective(500px);
-}
-
+  }
   90% {
     transform: translate( -0.3rem -0.2rem) rotate(1.2deg) perspective(500px);
-}
-
+  }
   10% {
     transform: translate(-0.3) rotate(.5deg) perspective(500px);
   }
@@ -143,37 +136,37 @@ h1 {
 }
 
 @keyframes crt-me {
-	 0% {
-        clip: rect(31px, 9999px, 94px, 0)
-    }
-    10% {
-        clip: rect(112px, 9999px, 76px, 0)
-    }
-    20% {
-        clip: rect(85px, 9999px, 77px, 0)
-    }
-    30% {
-        clip: rect(27px, 9999px, 97px, 0)
-    }
-    40% {
-        clip: rect(64px, 9999px, 150px, 0)
-    }
-    50% {
-        clip: rect(61px, 9999px, 85px, 0)
-    }
-    60% {
-        clip: rect(99px, 9999px, 114px, 0)
-    }
-    70% {
-        clip: rect(34px, 9999px, 115px, 0)
-    }
-    80% {
-        clip: rect(98px, 9999px, 129px, 0)
-    }
-    90% {
-        clip: rect(43px, 9999px, 96px, 0)
-    }
-    100% {
-        clip: rect(82px, 9999px, 64px, 0)
-    }
+  0% {
+      clip: rect(31px, 9999px, 94px, 0)
+  }
+  10% {
+      clip: rect(112px, 9999px, 76px, 0)
+  }
+  20% {
+      clip: rect(85px, 9999px, 77px, 0)
+  }
+  30% {
+      clip: rect(27px, 9999px, 97px, 0)
+  }
+  40% {
+      clip: rect(64px, 9999px, 150px, 0)
+  }
+  50% {
+      clip: rect(61px, 9999px, 85px, 0)
+  }
+  60% {
+      clip: rect(99px, 9999px, 114px, 0)
+  }
+  70% {
+      clip: rect(34px, 9999px, 115px, 0)
+  }
+  80% {
+      clip: rect(98px, 9999px, 129px, 0)
+  }
+  90% {
+      clip: rect(43px, 9999px, 96px, 0)
+  }
+  100% {
+      clip: rect(82px, 9999px, 64px, 0)
+  }
 }

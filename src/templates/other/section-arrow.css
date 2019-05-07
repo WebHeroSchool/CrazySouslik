@@ -1,40 +1,48 @@
+.section--welcom > .section__arrow {
+  position: absolute;
+    left: 50%;
+    bottom: 7%;
+    
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
+    bottom: 20%;
+  }
+}
 .section__arrow {
   border-bottom: 2px solid rgb(214, 205, 105);
   border-right: 2px solid rgb(214, 205, 105);
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%) rotate(35deg) skewX(-20deg);
-  animation: arrow .5s infinite ease-out alternate;
+  display: block;
+  margin: 0 auto;
+  size: 5rem;
+  transform: translateY(7%) rotate(35deg) skewX(-20deg);
 
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
+    size: 4rem;
+  }
+
+  &--run {
+    width: 8rem;
+    transition: .8s;
+    border-right: 120px solid rgb(214, 205, 105); 
+    border-bottom: 120px solid rgb(214, 205, 105);
+    transform: translateY(3000%) rotate(70deg) skewX(50deg);   
+  }
   
+  &--animation {
+    animation: arrow .5s infinite ease-out alternate;
+  }
 
   &:hover {
-    border-bottom: 3px solid rgb(214, 205, 105);
-  border-right: 3px solid rgb(214, 205, 105);
+    border-bottom: 3px solid yellow;
+    border-right: 3px solid yellow;
   }
-
-  &-link {
-    size: 100%;
-    display: block;
-  }
-}
-
-.section__works + .section__arrow {
-
-  @media (max-width: 800px) {
-    bottom: 0;
-  }  
 }
 
 @keyframes arrow {
   from {
-    transform: translate(-50%, 5%) rotate(35deg) skewX(-20deg);
+    transform: translateY(7%) rotate(35deg) skewX(-20deg);
   }
 
   to {
-    transform: translate(-50%, 0) rotate(35deg) skewX(-20deg);
+    transform: translateY(0) rotate(35deg) skewX(-20deg);
   }
 }

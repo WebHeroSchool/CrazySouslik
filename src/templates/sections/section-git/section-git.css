@@ -1,9 +1,14 @@
+.section__git {
+
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
+    min-height: 0;
+  }
+}
+
 .git {
-  display: flex;
   align-items: center;
-  height: 100%;
+  display: flex; 
   width: 100%;
-  padding: 0 0 25% 0;
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -34,13 +39,18 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;;
     height: 100%;
-    width: 100%;    
-  }
+    list-style-type: decimal-leading-zero;
 
-  @media (max-width: 800px) {
-    width: 100%;
+    @media (max-width: 800px) {
+      width: 95%;
+      transform: translateX(-2.5%);
+    }
+
+    @media only screen and (max-width : 800px) and (orientation:landscape) {
+      min-height: 100vh;
+    }
   }
 }
 
@@ -55,6 +65,7 @@
 .list__title {
   color:yellow;
   display: block;
+  
   margin: 0;
   margin-bottom: .5rem;
   text-decoration: none;
@@ -75,6 +86,7 @@
 }
 
 .list__data-update {
+  margin: 0;
   position: absolute;
   right: 0;
 }
@@ -116,7 +128,6 @@
     left: -2rem;
     size: 2rem;
   }
-
 }
 
 .list__star {
@@ -138,9 +149,12 @@
 .list__nav {
   bottom: 0;
   position: absolute;
-  size: 5rem;
   text-align: center;
-  width: 100%;
+  width: 110%;
+
+  @media (max-width: 800px) {
+    transform: translateX(-5%);
+  }
 }
 
 .list__nav-page {
@@ -157,15 +171,15 @@
 }
 
 .git__preloader {
-  
   background: black;
   display: none;
   position: absolute;
   right: 0;
   top: 0;
+  transform: scale(1.1);
   height: 80%;
   width: 100%;
-  z-index: 99;
+  z-index: 1;
 
   & .caption {
     margin: 3rem auto;

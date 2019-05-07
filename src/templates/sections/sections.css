@@ -1,7 +1,9 @@
 .section {
+  align-items: center;
   position: relative;
   display: flex;
-  align-items: center;
+  margin: 2rem auto;
+  min-height: 100vh;
 
   &__title {
     font-size: 3rem;
@@ -10,6 +12,7 @@
   &__text {
     color: #d6cd69;
     font-size: 2rem;
+    font-weight: bold;
     text-align: justify;
   }
 }
