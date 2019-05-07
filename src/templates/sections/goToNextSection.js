@@ -1,6 +1,6 @@
 (function() {
   //добавляет адресса стрелкам быстрого перехода к следующей секции
-  const arrows = document.querySelectorAll('.section__arrow');
+  const arrows = document.querySelectorAll('.section__arrow-link');
   
   let idSection = [ '#works', '#skills', '#git', '#cooperation'];
   let index = 0;
@@ -9,20 +9,20 @@
 
     i.setAttribute( 'href', idSection[index] );
     index++;
-
-    i.addEventListener( 'click', runingDownArrow );
     
+    i.addEventListener( 'click', runingDownArrow );
   });
 
-  function runingDownArrow(e) {    
 
-    e.target.classList.remove('section__arrow--animation');
+  function runingDownArrow(e) {
+
+    e.target.classList.remove('section__arrow-link--animation');
     setTimeout( () => {
-      e.target.classList.add('section__arrow--run');
+      e.target.classList.add('section__arrow-link--run');
 
       setTimeout( () => {
-        e.target.classList.remove('section__arrow--run');
-        e.target.classList.add('section__arrow--animation');
+        e.target.classList.remove('section__arrow-link--run');
+        e.target.classList.add('section__arrow-link--animation');
       }, 1000);
     }, 100);    
   }
