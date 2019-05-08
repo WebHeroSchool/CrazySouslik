@@ -41,11 +41,10 @@
     flex-direction: column;
     justify-content: center;;
     height: 100%;
-    list-style-type: decimal-leading-zero;
-
+    
     @media (max-width: 800px) {
-      width: 95%;
-      transform: translateX(-2.5%);
+      width: 96%;
+      transform: translateX(-5.5%);
     }
 
     @media only screen and (max-width : 800px) and (orientation:landscape) {

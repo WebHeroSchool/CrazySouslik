@@ -9,8 +9,7 @@
         progress = 0,
         imagesTotalCount = images.length,
         imagesLoadedCount = 0,
-        imageClone = new Image();
-        
+        imageClone = new Image();        
 
     for( let i = 0; i < imagesTotalCount; i++ ) {
 
@@ -26,8 +25,6 @@
       progressDisplay.innerHTML = progress + '%';
       imagesLoadedCount++;
 
-      console.log( progress);
-
       if ( imagesLoadedCount >= imagesTotalCount ) {
       
         setTimeout( function() {          
@@ -39,7 +36,5 @@
       }
     }
   }
-
-  
 
 }());
