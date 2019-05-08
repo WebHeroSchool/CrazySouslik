@@ -19,6 +19,29 @@
     position: relative;
     transform: translateY(-7%) rotate(45deg);
 
+    &:before,
+    &:after {
+      content: '';
+      background: yellow;
+      display: block;
+      height: 3px;
+      opacity: 0;
+      position: absolute;
+      transition: .5s;
+      width: 120%;
+    }
+
+    &:before {
+      bottom: .5rem;
+      left: -1.5rem;
+    }
+
+    &:after {
+      bottom: 3.3rem;
+      left: 1.3rem;
+      transform: rotate(90deg);
+    }
+
     &--run {
       transition: 2s;
       border-right: 200px solid rgb(214, 205, 105); 
@@ -36,23 +59,7 @@
 
       &:before,
       &:after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 120%;
-        background: yellow;
-        position: absolute;      
-      }
-
-      &:before {
-        bottom: .5rem;
-        left: -1.5rem;
-      }
-
-      &:after {
-        bottom: 3.3rem;
-        left: 1.3rem;
-        transform: rotate(90deg);
+        opacity: 1;
       }
     }     
   }
