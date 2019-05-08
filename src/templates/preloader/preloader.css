@@ -1,5 +1,8 @@
 .preloader {
   background: inline('night-wood.gif') black center no-repeat;
+  color: #d6d6cf;
+  font-size: 12rem;
+  font-weight: bolder;
   position: fixed;
   top: 0;
   height: 100vh;
@@ -8,6 +11,18 @@
   transition: .3s all;
   opacity: 1;
   visibility: visible;
+
+  &__done {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.percentDisplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .souslic-wrap {
@@ -24,11 +39,6 @@
   to {
     transform: translateX(90%);
   }
-}
-
-.done {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .loader {
