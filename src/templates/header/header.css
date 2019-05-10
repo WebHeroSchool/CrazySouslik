@@ -32,26 +32,28 @@
       display: none;
     }
   
-    &__item{
+    &-item{
       color: rgb(214, 205, 105);
       font-weight: bold;
     }
   
-    &__item:nth-child(2){
+    &-item:nth-child(2){
       margin: 0 2rem;
     }
   
-    &__item:hover {
+    &-item:hover {
       color: white;
     }
 
-    &__item:active {
+    &-item:active {
       color: red;
     }
   }
 }
 
 .lang-switch {
+  color: #0094ff;
+  font-size: 1.8rem;
   margin-left: 3rem;
 
   @media (max-width: 800px) {
@@ -63,7 +65,6 @@
     border: none;
     background: none;
     color: #0094ff;
-    font-size: 1.8rem;
     font-weight: bold;
     padding: 0;
     text-decoration: none;

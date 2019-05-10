@@ -88,82 +88,87 @@
 }
 
 .menu__navigation {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  
+  @media only screen and (max-width : 800px) and (orientation:landscape) {
+    right: 110%;
+    top: -1000%;
+  }
+}
+
+.navigation {
+  align-self: center;
+  background: rgba(0,0,0,.8);
   border-radius: 3rem;
   border-left: 2px solid yellow;
-  background: rgba(0,0,0,.8);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-self: center;  
-  position: absolute;
   height: 90vh;
-  right: -2px;
-  top: -2px;
   transform: translateX(105%);
+  transition: 1s;
   width: 40rem;
   z-index: 9;
-  transition: 1s;
-
-
+  
   @media only screen and (max-width : 800px) and (orientation:landscape)  {
     align-items: center;
     border: none;
     border-bottom: 2px solid yellow;
     height:80vh;
     flex-direction: row;
-    right: 110%;
-    top: -1000%;
     transform: translateX(0);
     width: 80vw;
-	}
-}
-
-.menu__item {  
-  border-bottom: 1px solid rgb(253, 253, 143);
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-  height: 23%;
-  text-decoration: none;
-  margin-left: 1rem;
-  filter: brightness(80%);
-
-  @media only screen and (max-width : 800px) and (orientation:landscape) {
-    height: 60%;
-    width: 40%;
   }
-
-  &:nth-child(1) {
-    background: url(../images/welcom.jpg) center no-repeat;
-    background-size: contain;
-  }
-  &:nth-child(2) {
-    background: url(../images/works.jpg) center no-repeat;
-    background-size: contain;
-  }
-  &:nth-child(3) {
-    background: url(../images/skills.jpg) center no-repeat;
-    background-size: contain;
-  }
-  &:nth-child(4) {
-    background: url(../images/repo.jpg) center no-repeat;
-    background-size: contain;
-  }
-
-  &:nth-last-child(1) {
-    border: none;
-    
+  
+  &__item {  
+    border-bottom: 1px solid rgb(253, 253, 143);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 23%;
+    text-decoration: none;
+    margin-left: 1rem;
+    filter: brightness(80%);
+  
     @media only screen and (max-width : 800px) and (orientation:landscape) {
-      border-bottom: 1px solid rgb(253, 253, 143);
+      height: 60%;
+      width: 40%;
     }
-  }
-
-  &:hover {
-    color: yellow;
-    font-size: 2rem;
-    transition: .5s;
-    filter: brightness(120%);
-    background-size: 60%;
+  
+    &:nth-child(1) {
+      background: url(../images/welcom.jpg) center no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(2) {
+      background: url(../images/works.jpg) center no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(3) {
+      background: url(../images/skills.jpg) center no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(4) {
+      background: url(../images/repo.jpg) center no-repeat;
+      background-size: contain;
+    }
+  
+    &:nth-last-child(1) {
+      border: none;
+      
+      @media only screen and (max-width : 800px) and (orientation:landscape) {
+        border-bottom: 1px solid rgb(253, 253, 143);
+      }
+    }
+  
+    &:hover {
+      color: yellow;
+      font-size: 2rem;
+      transition: .5s;
+      filter: brightness(120%);
+      background-size: 60%;
+    }
   }
 }
 
@@ -180,10 +185,6 @@
   @media (max-width: 800px) {
     right: 5%;
   }
-/*   
-  @media only screen and (max-width : 800px) and (orientation:landscape) {
-    bottom: 2.5rem;
-  } */
 
   &:before {
     border-top: 1px solid yellow;

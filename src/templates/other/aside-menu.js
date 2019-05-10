@@ -2,10 +2,10 @@
 (function closeAsideMenu() {
 
   const asideMenu = document.querySelector('.menu__label'),
-        menuItem = document.querySelectorAll( '.menu__item'),
+        menuItem = document.querySelectorAll( '.navigation__item'),
         chekMenu = document.getElementById('menu__check');
 
-  document.body.addEventListener('click', (e) => {    
+  document.body.addEventListener( 'click', (e) => {    
     
     if ( chekMenu.checked ) {
 

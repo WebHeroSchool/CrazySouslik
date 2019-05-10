@@ -31,10 +31,15 @@
             
           if( !preloader.classList.contains( 'preloader__done' ) ) {
             preloader.classList.add( 'preloader__done' );
+
+            //отложенная загрузка суслика для облегчения
+            const souslikPictur = document.querySelector('.souslik__staps');
+
+            souslikPictur.src = 'images/souslik-walk.png';
           }
         }, 1000);
       }
     }
   }
-
+  
 }());
