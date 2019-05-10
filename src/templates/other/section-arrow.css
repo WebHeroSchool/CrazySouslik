@@ -2,6 +2,7 @@
   position: absolute;
     left: 50%;
     bottom: 7%;
+    transform: translateX(-50%);
     
   @media only screen and (max-width : 800px) and (orientation:landscape) {
     bottom: 20%;

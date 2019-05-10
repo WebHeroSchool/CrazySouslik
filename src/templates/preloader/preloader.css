@@ -3,14 +3,14 @@
   color: #d6d6cf;
   font-size: 12rem;
   font-weight: bolder;
+  height: 100%;
+  opacity: 1;
   position: fixed;
   top: 0;
-  height: 100vh;
+  transition: .3s all;
+  visibility: visible;
   width: 100%;
   z-index: 999;
-  transition: .3s all;
-  opacity: 1;
-  visibility: visible;
 
   &__done {
     opacity: 0;

@@ -14,5 +14,10 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: justify;
+
+    @media (max-width: 800px) {
+      margin: 0;
+      margin-bottom: .5rem;
+    }
   }
 }

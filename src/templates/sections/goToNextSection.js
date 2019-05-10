@@ -7,25 +7,24 @@
 
   arrows.forEach( (i) => {
 
-    i.setAttribute( 'href', idSection[index] );
+    i.href = idSection[ index ];
     index++;
     
-    i.addEventListener( 'click', runingDownArrow );
-  });
+    //стрелка бежит вниз по клику
+    i.addEventListener( 'click', function(e) {
 
-
-  function runingDownArrow(e) {
-
-    e.target.classList.remove('section__arrow-link--animation');
-    setTimeout( () => {
-      e.target.classList.add('section__arrow-link--run');
-
+      e.target.classList.remove('section__arrow-link--animation');
       setTimeout( () => {
-        e.target.classList.remove('section__arrow-link--run');
-        e.target.classList.add('section__arrow-link--animation');
-      }, 1000);
-    }, 100);    
-  }
+        e.target.classList.add('section__arrow-link--run');
+  
+        setTimeout( () => {
+          e.target.classList.remove('section__arrow-link--run');
+          e.target.classList.add('section__arrow-link--animation');
+        }, 1000);
+      }, 100);    
+    });
+
+  });
 
   //плавность при переходе по якорным ссылкам
   var $page = $('html, body');
