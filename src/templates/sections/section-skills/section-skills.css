@@ -61,6 +61,7 @@
     color:  rgb(214, 205, 105);
     position: relative;
     text-align: justify;
+    transition: .1s;
     margin-bottom: 2rem;
 
     &:nth-last-child(1) {
@@ -69,10 +70,18 @@
   }
 
   &__item:hover {
-    transform: scale(1.01);
+    transform: translateX(-.5%);
   }
 
-  &__item::after {
+  #html:after,
+  #css:after,
+  #js:after,
+  #git:after,
+  #gulp:after,
+  #postcss:after,
+  #sass:after,
+  #node:after,
+  #react:after {
     content: "";
     display: block;
     height: 3rem;
@@ -87,38 +96,48 @@
     }
   }
 
-  &__item:nth-child(1)::after {
+  #html:after {
     background: url("../images/html.png") no-repeat;
     background-size: contain;
   }
 
-  &__item:nth-child(2)::after {
+  #css:after {
     background: url("../images/css.png") no-repeat;
     background-size: contain;
   }
 
-  &__item:nth-child(3)::after {
+  #js:after {
     background: url("../images/js.png") no-repeat;
     background-size: contain;
   }
 
-  &__item:nth-child(4)::after {
+  #git:after {
     background: url("../images/git.png") no-repeat;
     background-size: contain;
   }
 
-  &__item:nth-child(5)::after {
+  #gulp:after {
     background: url("../images/gulp.png") no-repeat;
     background-size: contain;
   }
 
-  &__item:nth-child(6)::after {
+  #postcss:after {
     background: url("../images/postcss.png") no-repeat;
     background-size: contain;
   }
 
-  &__item:nth-child(7)::after {
+  #sass:after {
     background: url("../images/sass.png") no-repeat;
+    background-size: contain;
+  }
+
+  #react:after {
+    background: url("../images/react.png") no-repeat;
+    background-size: contain;
+  }
+
+  #node:after {
+    background: url("../images/node.png") no-repeat;
     background-size: contain;
   }
 

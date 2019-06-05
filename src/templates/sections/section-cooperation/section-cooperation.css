@@ -3,6 +3,7 @@
   min-height: calc(100vh - 18rem);  
 
   & .section__wrapp {
+    top: 0;
     position: sticky;
   }
 }
