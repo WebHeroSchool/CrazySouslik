@@ -18,10 +18,12 @@
 
   &__icon {
     align-items: center;
+    cursor: url(../images/hand.cur),pointer;
+    display: flex;
     justify-content: center;
     
     
-    display: flex;
+    
     height: 100%;
     width: 100%;
     position: relative;

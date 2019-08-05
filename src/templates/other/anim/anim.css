@@ -1,13 +1,16 @@
-
 .anim {
+  animation: rotate 14s infinite linear;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
   transform-style: preserve-3d;
-  perspective: 1000px;
-  animation: rotate 14s infinite linear;
+  perspective: 1000px;  
+  
+  @media (max-width:972px) {
+    display: none;
+  }
 }
 @keyframes rotate {
   100% {
@@ -38,7 +41,7 @@
     opacity: 1;
   }
   100% {
-    /* transform: rotateZ(-21deg) rotateY(330deg) translateX(300px) rotateZ(21deg); */
+    transform: rotateZ(-21deg) rotateY(330deg) translateX(100px) rotateZ(21deg);
   }
 }
 .c:nth-child(2) {
