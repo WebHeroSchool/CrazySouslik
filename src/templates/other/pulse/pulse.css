@@ -1,0 +1,133 @@
+.pulse {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  position: absolute;
+  left: -100%;
+  width: 80%;
+
+  @media (max-width: 800px) {
+    bottom: -10%;
+    left: 0;
+    width: 70%;
+  }
+
+  &__big-circle {
+    animation: circle-spin 50s linear infinite;
+    border: 1px solid #d6cd69;
+    border-radius: 50%;
+    position: absolute;
+    transition: .5s;
+    size: 100%;
+  }
+
+  &__point {
+    background: gold;
+    border-radius: 50%;
+    color: gold;
+    position: absolute;
+    size: 3%;
+
+    &:nth-child(1) {
+      top: -1%;
+      left: 50%;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      left: -1%;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      right: -1%;
+    }
+
+    &:nth-child(4) {
+     bottom: -1%;
+      right: 50%;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: block;
+    animation: circle-spin 50s linear reverse infinite;
+     top: 100%;
+     left: 150%;
+
+    &_position-left {
+      left: -150%;
+    }
+
+    &_position-top {
+      top: -100%;
+    }
+  }
+
+  &__circle {
+    animation: circle-pulse-spin 20s linear alternate-reverse infinite;
+    border: 2px solid #cec350;
+    border-bottom: none;
+    border-radius: 50%;
+    size: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img-wrap {
+    animation: circle-spin 20s linear alternate-reverse infinite;
+    size: 60%;
+    position: relative;
+
+    &:after {
+      content: "❤";
+      animation: pulse 1s linear infinite;
+      position: absolute;
+      top: 47%;
+      left: 34%;
+      color: red;
+      font-size: 13px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+@keyframes circle-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  20%{
+    transform: scale(1.1);
+  }
+  40%{
+    transform: scale(1);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-pulse-spin {
+  100% {
+    transform: rotate(-360deg) scale(1.2);
+  }
+}

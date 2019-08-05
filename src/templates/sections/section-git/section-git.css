@@ -7,6 +7,7 @@
 
 .git {
   align-items: center;
+  justify-content: space-between;
   display: flex; 
   width: 100%;
 
@@ -18,7 +19,7 @@
     align-self: flex-start;
     position: sticky;
     top: 0;
-    width: 50%;
+    width: 45%;
     z-index: 9;
 
     @media (max-width: 800px) {
@@ -30,7 +31,7 @@
   &__list-wrapper {
     min-height: 50vh;
     position: relative;
-    width: 50%;
+    width: 45%;
     @media (max-width: 800px) {
       width: 100%;
     }

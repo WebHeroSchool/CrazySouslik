@@ -1,6 +1,7 @@
 .skills {
-  display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   
 
@@ -10,13 +11,14 @@
 
   &__title {
     align-self: flex-start;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
     position: sticky;
     top: 0;
-    width: 50%;
+    width: 45%;
     z-index: 9;
 
-    @media (max-width: 800px) {
-      background: rgba(0,0,0,.8);
+    @media (max-width: 800px) {      
       width: 100%;
     }
   }
@@ -26,20 +28,12 @@
     flex-direction: column;
     justify-content: center;;
     height: 100%;
-    width: 50%;
+    width: 45%;
 
     @media (max-width: 800px) {
       width: 100%;
     }
   }
-
-  @media (max-width: 800px) {
-    width: 100%;
-  }
-}
-
-.section__text--width {
-  width: 80%;
 
   @media (max-width: 800px) {
     width: 100%;
@@ -51,11 +45,13 @@
   position: relative;
 
   @media (max-width: 800px) {
-    transform: translateX(-2rem);
+    padding: 0;
   }
  
 
   &__item {
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
     font-size: 1.8rem;
     font-weight: 900;
     color:  rgb(214, 205, 105);

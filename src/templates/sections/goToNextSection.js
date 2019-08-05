@@ -5,23 +5,24 @@
   let idSection = [ '#works', '#skills', '#git', '#cooperation'];
   let index = 0;
 
-  arrows.forEach( (i) => {
+  arrows.forEach((i) => {
 
-    i.href = idSection[ index ];
+    i.href = idSection[index];
     index++;
     
     //стрелка бежит вниз по клику
-    i.addEventListener( 'click', function(e) {
+    i.addEventListener('click', function(e) {
 
       e.target.classList.remove('section__arrow-link--animation');
-      setTimeout( () => {
+      setTimeout(() => {
         e.target.classList.add('section__arrow-link--run');
   
-        setTimeout( () => {
+        setTimeout(() => {
           e.target.classList.remove('section__arrow-link--run');
           e.target.classList.add('section__arrow-link--animation');
         }, 1000);
-      }, 100);    
+
+      }, 100);      
     });
 
   });

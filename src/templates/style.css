@@ -9,6 +9,7 @@
 body {
   background: black;
   color: yellow;
+  cursor: url(../images/cursor.cur),default;
   font-family: AvenirNextCyr, sans-serif;
   font-weight: normal;
   width: 100%;
@@ -22,4 +23,8 @@ body {
   min-height: 100vh;
   padding: 0 10%;
   position: relative;
+}
+
+a {
+  cursor: url(../images/hand.cur),pointer;
 }
