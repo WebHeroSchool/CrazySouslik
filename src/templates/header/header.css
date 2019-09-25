@@ -34,7 +34,9 @@
   
     &-item{
       color: rgb(214, 205, 105);
+      border-radius: 1rem;
       font-weight: bold;
+      transition: .3s;
     }
   
     &-item:nth-child(2){
